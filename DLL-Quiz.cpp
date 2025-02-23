@@ -46,16 +46,13 @@ struct DLL
   Node * insert( Node * position, T const & data )
   {
     ///////////////////////// TO-DO (1) //////////////////////////////
-Node * insert( Node * position, T const & data )
-{
-  Node* newNode = new Node(data);
-  newNode->_prev = position->_prev;
-  newNode->_next = position;
-  position->_prev->_next = newNode;
-  position->_prev = newNode;
-  ++_size;
-  return newNode;
-}
+   Node* newNode = new Node(data);
+    newNode->_prev = position->_prev;
+    newNode->_next = position;
+    position->_prev->_next = newNode;
+    position->_prev = newNode;
+    ++_size;
+    return newNode;
     /////////////////////// END-TO-DO (1) ////////////////////////////
   }
 
